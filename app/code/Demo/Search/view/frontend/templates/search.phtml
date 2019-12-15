@@ -1,0 +1,22 @@
+<?php
+$url = $this->getUrl('search/index/search');
+$imageUrl = $this->getUrl().'pub/media/catalog/product';
+?>
+<div id="result" data-bind="scope: 'ko-search'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "ko-search": {
+                            "component": "Demo_Search/js/ko-search",
+                            "url": "<?=$url?>",
+                            "imageurl": "<?= $imageUrl ?>"
+                        }
+                    }
+                }
+            }
+        }
+</script>
